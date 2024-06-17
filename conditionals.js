@@ -6,10 +6,24 @@ let other = document.querySelector(".other");
 
 button.addEventListener("click", function() {
     let state = document.querySelector(".state").value;
-
+    console.log(state);
     // CODE ALONG
     // 1. Write an if statement that would display the california message if a user says they're from "California".
-    
+    switch (state.toLowerCase()) {
+        case "california":
+            console.log("ew");
+            californiaMessage.style.display = "block";
+            break;
+        case "illinois":
+            illinoisMessage.style.display = "block";
+            break;
+        case "new york":
+            newyorkMessage.style.display = "block";
+            break;
+        default:
+            other.style.display = "block";
+            break;
+    };
     // CODE SOLO
     // 2. Write an else if statement that would display the illinois message if a user says they're from "Illinois".
     
